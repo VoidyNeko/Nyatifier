@@ -225,10 +225,10 @@ def _low_level_keyboard_proc(nCode, wParam, lParam):
             return user32.CallNextHookEx(None, nCode, wParam, lParam)
 
         # =====================
-        # 启用/禁用开关（不受窗口状态限制）
+        # 启用/禁用开关（仅悬浮窗可见时生效）
         # =====================
         enable_toggle_info = instance._enable_toggle_info
-        if enable_toggle_info and vk_code == enable_toggle_info[0] and ctrl == enable_toggle_info[1] and alt == enable_toggle_info[2] and shift == enable_toggle_info[3]:
+        if enable_toggle_info and instance._floating_visible and vk_code == enable_toggle_info[0] and ctrl == enable_toggle_info[1] and alt == enable_toggle_info[2] and shift == enable_toggle_info[3]:
             instance._request_enable_toggle()
             return 1
 
@@ -542,7 +542,7 @@ class NyatifierApp(QObject):
     def _setup_tray(self):
         self._tray = QSystemTrayIcon(self._app)
         self._tray.setToolTip("喵笔生花 / Nyatifier")
-        self._tray.setIcon(QIcon(os.path.join(os.path.dirname(os.path.dirname(__file__)), "favicon.ico")))
+        self._tray.setIcon(QIcon(os.path.join(_get_data_dir(), "favicon.ico")))
 
         menu = QMenu()
 

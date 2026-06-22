@@ -7,6 +7,7 @@ a = Analysis(
     datas=[
         ('kamojis.json', '.'),
         ('nyatifier_settings.json', '.'),
+        ('favicon.ico', '.'),
     ],
     hiddenimports=[
         'PyQt6.QtCore',
