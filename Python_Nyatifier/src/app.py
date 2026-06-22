@@ -89,12 +89,14 @@ def _parse_hotkey(hotkey_str: str) -> tuple[int, bool, bool, bool] | None:
 # 修饰键掩码（用于 GetAsyncKeyState 检测同时按下）
 MOD_SHIFT_MASK = 0x8000
 
-SETTINGS_FILE = os.path.join(
-    os.path.dirname(os.path.dirname(__file__)), "nyatifier_settings.json"
-)
-KAMOJIS_FILE = os.path.join(
-    os.path.dirname(os.path.dirname(__file__)), "kamojis.json"
-)
+def _get_data_dir() -> str:
+    """返回数据文件所在目录，兼容 PyInstaller 打包后的路径"""
+    if getattr(sys, 'frozen', False):
+        return getattr(sys, '_MEIPASS', os.path.dirname(sys.executable))
+    return os.path.dirname(os.path.dirname(__file__))
+
+SETTINGS_FILE = os.path.join(_get_data_dir(), "nyatifier_settings.json")
+KAMOJIS_FILE = os.path.join(_get_data_dir(), "kamojis.json")
 
 user32 = ctypes.windll.user32
 kernel32 = ctypes.windll.kernel32
