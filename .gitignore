@@ -1,1 +1,33 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.spec
+
+# ===== Android / Gradle =====
+.gradle/
+build/
+*/build/
+local.properties
+*.iml
+*.apk
+*.aab
+*.dex
+*.class
+app/release/
+
+# ===== IDE =====
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Misc =====
 /报错日志.txt
