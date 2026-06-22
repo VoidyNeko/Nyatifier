@@ -1,0 +1,8 @@
+{
+  "show_hotkey": "Alt+D",
+  "convert_only_hotkey": "Alt+Enter",
+  "undo_hotkey": "Alt+Z",
+  "toggle_hotkey": "Alt+Q",
+  "auto_start": false,
+  "char_threshold": 100
+}

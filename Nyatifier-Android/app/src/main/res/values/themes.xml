@@ -1,0 +1,14 @@
+<resources>
+    <style name="Theme.Nyatifier" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#FFB6C1</item>
+        <item name="colorPrimaryVariant">#FF69B4</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:windowBackground">#1A1A2E</item>
+        <item name="colorSurface">#16213E</item>
+        <item name="colorOnSurface">#FFF5F7</item>
+    </style>
+
+    <style name="Theme.Nyatifier.Settings" parent="Theme.Nyatifier">
+        <item name="android:windowBackground">#1A1A2E</item>
+    </style>
+</resources>

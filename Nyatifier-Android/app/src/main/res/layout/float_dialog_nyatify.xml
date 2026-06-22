@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_bg"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手动喵化 ≽^･⩊･^≼"
+        android:textSize="16sp"
+        android:textColor="#FFB6C1"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="粘贴或输入要喵化的文字..."
+        android:textColorHint="#666"
+        android:textColor="#FFF5F7"
+        android:background="@drawable/edit_text_bg"
+        android:padding="12dp"
+        android:minHeight="80dp"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:maxLength="1000"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg"
+        android:padding="12dp"
+        android:minHeight="60dp"
+        android:textColor="#FFB6C1"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginBottom="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btn_nyatify"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="喵化！"
+            android:textSize="14sp"
+            android:backgroundTint="#FFB6C1"
+            android:textColor="#1A1A2E"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_copy"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="复制"
+            android:textSize="14sp"
+            android:backgroundTint="#334455"
+            android:textColor="#BBC0D0"
+            android:visibility="gone"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="关闭"
+            android:textSize="14sp"
+            android:backgroundTint="#44223344"
+            android:textColor="#888" />
+
+    </LinearLayout>
+
+</LinearLayout>

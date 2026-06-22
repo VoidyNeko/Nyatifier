@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A2E"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!--  标题  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="猫猫设置 ˶&gt; ω &lt;˶"
+            android:textSize="20sp"
+            android:textColor="#FFB6C1"
+            android:layout_marginBottom="24dp" />
+
+        <!-- ====== 1. 启用开关 ====== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="启用猫化"
+                android:textSize="16sp"
+                android:textColor="#FFF5F7" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_enabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- ====== 2. 模式下拉 ====== -->
+        <TextView
+            android:id="@+id/label_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="转换模式"
+            android:textSize="16sp"
+            android:textColor="#FFF5F7"
+            android:layout_marginBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spinner_mode"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/edit_text_bg"
+            android:popupBackground="#16213E"
+            android:layout_marginBottom="20dp" />
+
+        <!-- ====== 4. 字符阈值 ====== -->
+        <TextView
+            android:id="@+id/label_threshold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_char_threshold"
+            android:textSize="16sp"
+            android:textColor="#FFF5F7"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edit_char_threshold"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:inputType="number"
+            android:text="500"
+            android:textColor="#FFF5F7"
+            android:textColorHint="#666"
+            android:background="@drawable/edit_text_bg"
+            android:padding="12dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="28dp" />
+
+        <!-- ====== 5. 悬浮球大小 ====== -->
+        <TextView
+            android:id="@+id/label_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="悬浮球大小"
+            android:textSize="16sp"
+            android:textColor="#FFF5F7"
+            android:layout_marginBottom="6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="28dp">
+
+            <SeekBar
+                android:id="@+id/seek_overlay_size"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="5"
+                android:progress="2"
+                android:thumbTint="#FFB6C1"
+                android:progressTint="#FFB6C1"
+                android:progressBackgroundTint="#334455" />
+
+            <TextView
+                android:id="@+id/tv_overlay_size"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="64dp"
+                android:textSize="13sp"
+                android:textColor="#BBC0D0"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <!-- ====== 6. 测试输入框 ====== -->
+        <TextView
+            android:id="@+id/label_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试喵化（输入文字后点悬浮球）"
+            android:textSize="15sp"
+            android:textColor="#FFF5F7"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信等无法自动喵化？双击悬浮球，手动粘贴即可！"
+            android:textSize="12sp"
+            android:textColor="#888"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/edit_test_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="在这里打字测试..."
+            android:textColorHint="#666"
+            android:textColor="#FFF5F7"
+            android:background="@drawable/edit_text_bg"
+            android:padding="12dp"
+            android:minHeight="100dp"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:textSize="14sp"
+            android:importantForAccessibility="yes"
+            android:focusable="true"
+            android:layout_marginBottom="24dp" />
+
+        <!-- ====== 分隔 + 抛弃猫猫 ====== -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#223345"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btn_abandon_cat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="抛弃猫猫 T^T（下次还要重新设置权限！）"
+            android:textSize="14sp"
+            android:backgroundTint="#663333"
+            android:textColor="#FF8888"
+            android:layout_marginBottom="24dp" />
+
+        <!--  署名  -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VoidyNeko桑制作喵~"
+            android:textSize="13sp"
+            android:textColor="#666"
+            android:gravity="center" />
+
+    </LinearLayout>
+</ScrollView>

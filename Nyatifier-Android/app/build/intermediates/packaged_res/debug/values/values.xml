@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#1A1A2E</color>
+    <color name="ic_launcher_foreground">#FFB6C1</color>
+    <string name="accessibility_description">喵笔生花需要无障碍权限来把输入框文字变成猫猫语喵~</string>
+    <string name="app_name">喵笔生花</string>
+    <string name="btn_enable_service">去开启无障碍</string>
+    <string name="btn_settings">设置</string>
+    <string name="how_to_use">使用方法：\n1. 打开本应用，启用无障碍服务\n2. 在任何输入框打字\n3. 单击悬浮喵球即可将文字变成猫猫语！\n4. 微信等无法自动喵化？双击悬浮球手动输入\n\n💡 长按悬浮窗打开设置！</string>
+    <string name="service_status_off">服务未开启</string>
+    <string name="service_status_on">喵~ 已就绪</string>
+    <string name="settings_cat_mode">猫模式（可爱的喵~）</string>
+    <string name="settings_char_threshold">字符阈值（超过不转换）</string>
+    <string name="settings_human_mode">人模式（仅替换 吗/嘛）</string>
+    <style name="Theme.Nyatifier" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#FFB6C1</item>
+        <item name="colorPrimaryVariant">#FF69B4</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:windowBackground">#1A1A2E</item>
+        <item name="colorSurface">#16213E</item>
+        <item name="colorOnSurface">#FFF5F7</item>
+    </style>
+    <style name="Theme.Nyatifier.Settings" parent="Theme.Nyatifier">
+        <item name="android:windowBackground">#1A1A2E</item>
+    </style>
+</resources>
